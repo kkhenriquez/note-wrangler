@@ -8,7 +8,8 @@ describe('myApp.viewNotes module', function() {
 
     it('should ....', inject(function($controller) {
       //spec body
-      var viewNotesCtrl = $controller('ViewNotesController');
+      var $scope = {};
+      var viewNotesCtrl = $controller('ViewNotesController', { $scope: $scope });
       expect(viewNotesCtrl).toBeDefined();
     }));
 
