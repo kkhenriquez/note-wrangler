@@ -9,6 +9,15 @@ angular.module('myApp.viewNotes', ['ngRoute'])
   });
 }])
 
+.service('noteService', ['$http', function($http) {
+  this.getNotes = function() {
+    return $http({
+      method: 'GET',
+      url: 
+    })
+  }
+}])
+
 .controller('ViewNotesController', [function() {
 
 }]);
