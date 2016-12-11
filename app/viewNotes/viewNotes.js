@@ -13,11 +13,16 @@ angular.module('myApp.viewNotes', ['ngRoute'])
   this.getNotes = function() {
     return $http({
       method: 'GET',
-      url: 
-    })
-  }
+      url: 'components/notes/notes.json'
+    });
+  };
 }])
 
-.controller('ViewNotesController', [function() {
-
+.controller('ViewNotesController', ['noteService', '$scope',
+function(noteService, $scope) {
+  noteService.getNotes().then(function(response) {
+    $scope.data = response.data;
+  }, function(response){
+    console.log('Some error ocurred');
+  });
 }]);

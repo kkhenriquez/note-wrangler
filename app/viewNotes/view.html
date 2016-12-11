@@ -1,8 +1,8 @@
-<div class="card">
-	<p>The brown fox jumps over the lazy dog.</p>
+<div class="card" ng-repeat="note in data">
+	<p>{{note.text}}</p>
 
 	<div>
-		<span>quote</span>
+		<span>{{note.tags}}</span>
 	 <a href="">Tweet it!</a>
 	</div>
 
