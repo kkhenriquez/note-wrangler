@@ -1,11 +1,43 @@
 /* app css stylesheet */
+body {
+}
+
+header {
+  border-bottom: 2px solid #1db1e7;
+  padding: 0px 20px;
+}
+
+article {
+  padding: 0px 20px;
+}
+
+h1 small a {
+  background-color: #1DB1E7;
+  color: GhostWhite;
+  padding: 5px 10px;
+  border-radius: 2px;
+  text-decoration: none;
+  line-height: 1.7em;
+  font-size: 0.7em;
+  position: relative;
+  top: -5px;
+}
+
+div.card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 div.card {
   background-color: Gainsboro;
   color: #292F33;
   padding: 20px 30px;
   margin: 10px;
-  width: 400px;
   border-radius: 2px;
+  max-width: 300px;
 }
 div.card p {
   font-size: 1.2em;
