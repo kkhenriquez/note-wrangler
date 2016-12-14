@@ -8,4 +8,14 @@
 	 <a href="">Tweet it!</a>
 	</div>
 </div>
+
+<div class="sort-menu">
+  <h2>Categories</h2>
+  <div class="menu">
+		<ul>
+			<li ng-repeat="note in data"><a href="">{{note.tags}}</a></li>
+		</ul>
+    <nw-category-item ng-repeat="category in categories" category="category">
+    </nw-category-item>
+  </div>
 </div>
