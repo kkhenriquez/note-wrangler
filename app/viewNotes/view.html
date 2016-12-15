@@ -1,7 +1,7 @@
 <h1 class="title">All Notes <small><a href="">Add Note</a></small></h1>
 
 <div class="card-container">
-<div class="card" ng-repeat="note in data">
+<div class="card" ng-repeat="note in data | filter:filters">
 	<p>{{note.text}}</p>
 	<div>
 		<span>{{note.tags}}</span>
@@ -13,7 +13,7 @@
   <h2>Categories</h2>
   <div class="menu">
 		<ul>
-			<li ng-repeat="note in data"><a href="">{{note.tags}}</a></li>
+			<li ng-repeat="note in data"><a ng-click="filters.tags = note.tags">{{note.tags}}</a></li>
 		</ul>
     <nw-category-item ng-repeat="category in categories" category="category">
     </nw-category-item>

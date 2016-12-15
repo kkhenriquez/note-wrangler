@@ -44,4 +44,10 @@ function(noteService, $scope) {
   }, function(response){
     console.log('Some error ocurred');
   });
+
+  $scope.filters = {};
+
+  $scope.makeActive = function() {
+
+  }
 }]);
