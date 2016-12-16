@@ -37,6 +37,21 @@ angular.module('myApp.viewNotes', ['ngRoute'])
   };
 })
 
+.directive('nwTagItem', function() {
+  return {
+    restrict: 'E',
+    scope: {
+      note: "="
+    },
+    templateUrl: '/viewNotes/nw-tag-item.html',
+    link: function(scope, element, attrs) {
+      scope.setTag = function() {
+        
+      }
+    }
+  }
+})
+
 .controller('ViewNotesController', ['noteService', '$scope',
 function(noteService, $scope) {
   noteService.getNotes().then(function(response) {
@@ -48,6 +63,6 @@ function(noteService, $scope) {
   $scope.filters = {};
 
   $scope.makeActive = function() {
-
+    $scope.filters.tags = $scope.note.tags
   }
 }]);
