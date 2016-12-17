@@ -1,5 +1,7 @@
 'use strict';
 
+//Functionality not yet implemented. Only focused on front end.
+
 angular.module('myApp.createNotes', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
@@ -17,7 +19,6 @@ function(noteService, $scope) {
       'text': text,
       'tags': tags
     };
-    console.log(noteObj);
     noteService.createNote(noteObj).then(function() {
       alert("success");
     }, function(response) {

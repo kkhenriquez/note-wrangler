@@ -1,5 +1,6 @@
-<p>{{body}}</p>
+
+<p>{{note.text}}</p>
 <div>
-  <span>{{tag}}</span>
- <a href="">Tweet it!</a>
+  <span>{{note.tags}}</span>
+  <a ng-click="tweet(note.text)" href="">Tweet it!</a>
 </div>

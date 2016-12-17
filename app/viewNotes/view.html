@@ -1,19 +1,21 @@
-<h1 class="title">All Notes <small><a href="#!/create">Add Note</a></small></h1>
-
-<div class="card-container">
-	<div class="card" ng-repeat="note in data | filter:filters">
-		<nw-card body="note.text" tag="note.tags"></nw-card>
+<div class="wrapper">
+	<h1 class="title">All Notes <small><a href="#!/create">Add Note</a></small></h1>
+<div class="card-menu-wrapper">
+	<div class="card-container">
+		<div class="card" ng-repeat="note in data | filter:filters">
+			<nw-card></nw-card>
+		</div>
 	</div>
 
-	<div class="filter-menu">
-	  <h2>Categories</h2>
-	  <div class="menu">
-			<ul>
-				<li><a ng-click="filters.tags = ''">All</a></li>
-				<nw-tag-item ng-repeat="note in data | unique:'tags'" ng-click="filters.tags = note.tags">
-				</nw-tag-item>
-			</ul>
-
-	  </div>
-	</div>
+		<div class="filter-menu">
+		  <h2>Categories</h2>
+		  <div class="menu">
+				<ul>
+					<li ng-click="filters.tags = ''">all</li>
+					<nw-tag-item ng-repeat="note in data | unique:'tags'" ng-click="filters.tags = note.tags">
+					</nw-tag-item>
+				</ul>
+		  </div>
+		</div>
+</div>
 </div>

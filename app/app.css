@@ -1,14 +1,25 @@
 /* app css stylesheet */
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  font-family: 'Signika', sans-serif;
 }
 
 header {
   border-bottom: 2px solid #1db1e7;
   padding: 0px 20px;
+  font-size: 1.125em;
+}
+header p {
+  margin: 16px 0px; 
 }
 
-article {
+main {
   padding: 0px 20px;
+  flex: 1;
 }
 
 h1 small a {
@@ -23,21 +34,31 @@ h1 small a {
   top: -5px;
 }
 
+div.card-menu-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 div.card-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+      flex: 1;
+      align-items: center;
 }
 
 div.card {
-  background-color: Gainsboro;
+  background-color: #EAF4F7;
   color: #292F33;
   padding: 20px 30px;
   margin: 10px;
   border-radius: 2px;
   max-width: 300px;
+  min-width: 200px;
+  flex: 1;
+  font-weight: 300;
 }
 div.card p {
   font-size: 1.2em;
@@ -66,4 +87,54 @@ div.card div a {
   border-radius: 2px;
   text-decoration: none;
   line-height: 1.7em;
+}
+
+div.filter-menu {
+  flex: 0 0 12em;
+  margin: 5px 10px;
+}
+
+div.menu ul {
+  list-style-type: none;
+  -webkit-padding-start: 0px;
+}
+
+div.menu ul li {
+  padding: 5px;
+  margin: 2px;
+}
+
+div.menu ul li:hover {
+  cursor: pointer;
+  background-color: #1DB1E7;
+  color: GhostWhite;
+  border-radius: 2px;
+}
+
+@media (max-width: 770px) {
+  div.card-menu-wrapper {
+    flex-direction: column;
+    flex: 1;
+  }
+  div.card-container {
+    flex: 1;
+  }
+  div.filter-menu {
+    order: -1;
+  }
+}
+
+footer {
+  margin: 10px 20px;
+  text-align: center;
+}
+
+footer p a {
+  text-decoration: none;
+  color: inherit;
+}
+
+footer p a:hover {
+  text-decoration: none;
+  color: #1DB1E7;
 }

@@ -6,37 +6,37 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Note Wrangler</title>
-  <meta name="description" content="">
+  <title>Note Wrangler. version by Kevin Henriquez</title>
+  <meta name="description" content="App to handle notes">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Signika:300,400" rel="stylesheet">
   <link rel="stylesheet" href="app.css">
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
-
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
-
   <header>
     <p>Note Wrangler. <small>An app to handle your notes</small></p>
   </header>
 
-  <article>
-
+  <main>
     <div ng-view></div>
+  </main>
 
-
-  </article>
+  <footer>
+    <p>Crafted by <a href="https://kkhenriquez.github.io/home" target="_blank">Kevin.</a></p>
+  </footer>
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="app.js"></script>
-  <script src="components/notes/notes.js"></script>
+  <!-- include notes.js later -->
   <script src="viewNotes/viewNotes.js"></script>
   <script src="viewNotes/directives/nw-card.js"></script>
   <script src="viewNotes/directives/nw-tag-item.js"></script>
