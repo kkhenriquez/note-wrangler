@@ -18,36 +18,13 @@ angular.module('myApp.viewNotes', ['ngRoute'])
   };
 }])
 
-/*
-.filter('noteFilter', function() {
-  return function(notesInput, tag) {
-    var note, tagMatch;
-    var result = [];
-
-    for (var i=0, l = notesInput.length; i < l; i++) {
-      note = notesInput[i];
-
-      tagMatch = !tag || note.tags === tag;
-
-      if(tagMatch) {
-        result.push(note)
-      }
-    }
-
-    return result;
-  };
-})
-*/
-
-
 .controller('ViewNotesController', ['noteService', '$scope',
 function(noteService, $scope) {
-  noteService.getNotes().then(function(response) {
-    $scope.data = response.data;
-  }, function(response){
-    console.log('Some error ocurred');
-  });
-
+    noteService.getNotes().then(function(response) {
+      $scope.data = response.data;
+    }, function(response){
+      console.log('Some error ocurred');
+    });
   $scope.filters = {};
 
   $scope.makeActive = function() {

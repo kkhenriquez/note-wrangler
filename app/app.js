@@ -5,12 +5,11 @@ angular.module('myApp', [
   'ngRoute',
   'myApp.viewNotes',
   'myApp.createNotes',
-  'myApp.version'
+  'myApp.version',
+  'angular.filter'
 ])
 
 .config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
-
-
   $routeProvider.otherwise({redirectTo: '/notes'});
 }]);

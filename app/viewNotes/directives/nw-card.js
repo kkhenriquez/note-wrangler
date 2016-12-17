@@ -4,11 +4,9 @@ angular.module('myApp.viewNotes')
   return {
     restrict: "E",
     templateUrl: 'viewNotes/templates/nw-card.html',
-    controller: function($scope) {
-      $scope.header = "Title";
-    },
     scope: {
-      note: "="
+      body: "=",
+      tag: "="
     }
   }
 });

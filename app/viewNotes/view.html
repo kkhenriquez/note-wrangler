@@ -2,18 +2,18 @@
 
 <div class="card-container">
 	<div class="card" ng-repeat="note in data | filter:filters">
-		<nw-card note="note"></nw-card>
+		<nw-card body="note.text" tag="note.tags"></nw-card>
 	</div>
 
-	<div class="sort-menu">
+	<div class="filter-menu">
 	  <h2>Categories</h2>
 	  <div class="menu">
 			<ul>
-				<li ng-repeat="note in data" ng-class="{'active': isActive()}"><a ng-click="filters.tags = note.tags">{{note.tags}}</a></li>
-
+				<li><a ng-click="filters.tags = ''">All</a></li>
+				<nw-tag-item ng-repeat="note in data | unique:'tags'" ng-click="filters.tags = note.tags">
+				</nw-tag-item>
 			</ul>
-			<nw-tag-item ng-repeat="note in data" note="note" ng-click="setTag()">
-			</nw-tag-item>
+
 	  </div>
 	</div>
 </div>

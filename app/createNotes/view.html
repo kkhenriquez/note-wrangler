@@ -1,6 +1,14 @@
-<p>This is the partial for view 2.</p>
-<p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-  <a href="#!/notes">Back</a>
-</p>
+<h1>Create New Note</h1>
+<form class="form">
+  <fieldset class="form-field">
+    <label for="content" class="form-label">Content</label>
+    <textarea type="text" class="form-input" name="content" ng-model="text"></textarea>
+  </fieldset>
+  <fieldset>
+    <label for="tag" class="form-label">Tag</label>
+    <input type="text" class="form-input" name="tag" ng-model="tags"/>
+  </fieldset>
+  <input type="button" value="send" ng-click="update(text,tags)"/>
+</form>
+<a ng-click="nothing()">Save</a>
+<a href="#!/notes">Back</a>
