@@ -4,7 +4,7 @@
 angular.module('myApp', [
   'ngRoute',
   'myApp.viewNotes',
-  'myApp.view2',
+  'myApp.createNotes',
   'myApp.version'
 ])
 

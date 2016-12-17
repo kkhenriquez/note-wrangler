@@ -18,6 +18,7 @@ angular.module('myApp.viewNotes', ['ngRoute'])
   };
 }])
 
+/*
 .filter('noteFilter', function() {
   return function(notesInput, tag) {
     var note, tagMatch;
@@ -36,21 +37,8 @@ angular.module('myApp.viewNotes', ['ngRoute'])
     return result;
   };
 })
+*/
 
-.directive('nwTagItem', function() {
-  return {
-    restrict: 'E',
-    scope: {
-      note: "="
-    },
-    templateUrl: '/viewNotes/nw-tag-item.html',
-    link: function(scope, element, attrs) {
-      scope.setTag = function() {
-        
-      }
-    }
-  }
-})
 
 .controller('ViewNotesController', ['noteService', '$scope',
 function(noteService, $scope) {

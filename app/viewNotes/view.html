@@ -1,22 +1,19 @@
-<h1 class="title">All Notes <small><a href="">Add Note</a></small></h1>
+<h1 class="title">All Notes <small><a href="#!/create">Add Note</a></small></h1>
 
 <div class="card-container">
-<div class="card" ng-repeat="note in data | filter:filters">
-	<p>{{note.text}}</p>
-	<div>
-		<span>{{note.tags}}</span>
-	 <a href="">Tweet it!</a>
+	<div class="card" ng-repeat="note in data | filter:filters">
+		<nw-card note="note"></nw-card>
 	</div>
-</div>
 
-<div class="sort-menu">
-  <h2>Categories</h2>
-  <div class="menu">
-		<ul>
-			<li ng-repeat="note in data" ng-class="{'active': isActive()}"><a ng-click="filters.tags = note.tags">{{note.tags}}</a></li>
+	<div class="sort-menu">
+	  <h2>Categories</h2>
+	  <div class="menu">
+			<ul>
+				<li ng-repeat="note in data" ng-class="{'active': isActive()}"><a ng-click="filters.tags = note.tags">{{note.tags}}</a></li>
 
-		</ul>
-		<nw-tag-item ng-repeat="note in data" note="note">
-		</nw-tag-item>
-  </div>
+			</ul>
+			<nw-tag-item ng-repeat="note in data" note="note" ng-click="setTag()">
+			</nw-tag-item>
+	  </div>
+	</div>
 </div>
