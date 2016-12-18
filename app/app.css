@@ -14,7 +14,7 @@ header {
   font-size: 1.125em;
 }
 header p {
-  margin: 16px 0px; 
+  margin: 16px 0px;
 }
 
 main {
@@ -122,6 +122,8 @@ div.menu ul li:hover {
   div.filter-menu {
     order: -1;
   }
+
+
 }
 
 footer {
@@ -137,4 +139,79 @@ footer p a {
 footer p a:hover {
   text-decoration: none;
   color: #1DB1E7;
+}
+
+form {
+}
+
+.form-field {
+  display: flex;
+  padding-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.form-field label {
+  padding-bottom: 10px;
+}
+
+.form-input {
+  flex: 1;
+  width: 500px;
+  border: 1px solid #1DB1E7;
+  border-radius: 2px;
+}
+
+@media (max-width: 770px) {
+  .form-input {
+    flex: 1;
+    width: 90%;
+    border: 1px solid #1DB1E7;
+    border-radius: 2px;
+  }
+}
+
+.btn {
+  margin: 10px 30px 10px 10px;
+  background-color: #1DB1E7;
+  color: GhostWhite;
+  border: 0;
+  border-radius: 2px;
+  padding: 5px 10px;
+  letter-spacing: 0.05em;
+}
+
+.btn-container a {
+  background-color: #1DB1E7;
+  color: GhostWhite;
+  padding: 5px 10px;
+  border-radius: 2px;
+  text-decoration: none;
+}
+
+@keyframes slideInUp {
+    from    { transform: translateY(100%); }
+    to      { transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+    from    { opacity: 1; }
+    to      { opacity: 0; }
+}
+
+@keyframes fadeIn {
+  from    { opacity: 0; }
+  to      { opacity: 1; }
+}
+
+.ng-leave {
+  animation: fadeOut 0.3s both ease-in;
+  z-index: 8888;
+}
+.ng-enter {
+  animation: slideInUp 0.8s both ease-in;
+  z-index: 9999;
+}
+
+.card.ng-enter {
+  animation: fadeIn 0.3s both ease-in;
 }

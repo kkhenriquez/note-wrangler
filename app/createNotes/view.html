@@ -1,15 +1,21 @@
 <div class="wrapper">
   <h1>Create New Note</h1>
   <form class="form">
+    
     <fieldset class="form-field">
       <label for="content" class="form-label">Content</label>
       <textarea type="text" class="form-input" name="content" ng-model="text"></textarea>
     </fieldset>
-    <fieldset>
+
+    <fieldset class="form-field">
       <label for="tag" class="form-label">Tag</label>
       <input type="text" class="form-input" name="tag" ng-model="tags"/>
     </fieldset>
-    <input type="button" value="Save" ng-click="nothing()"/>
+
+    <div class="btn-container">
+      <input type="button" value="Save" ng-click="nothing()" class="btn"/>
+      <a href="#!/notes">Back</a>
+    </div>
+
   </form>
-  <a href="#!/notes">Back</a>
 </div>
